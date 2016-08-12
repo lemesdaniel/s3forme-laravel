@@ -19,18 +19,6 @@ class S3formeFilesystemServiceProvider extends ServiceProvider
     public function boot()
     {
         
-        $this->publishes([__DIR__ . '/../resources/config/s3forme.php' => config_path('s3forme.php')]);
-        
-
-    }
-
-    /**
-     * Register the application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
         Storage::extend('s3forme', function($app, $config)
         {
             
@@ -44,5 +32,17 @@ class S3formeFilesystemServiceProvider extends ServiceProvider
             return new Filesystem(new AwsS3Adapter($client, $config['bucket']));
 
         });
+        
+
+    }
+
+    /**
+     * Register the application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        
     }
 }
