@@ -10,5 +10,10 @@
             "name": "Daniel Lemes",
             "email": "dlemes@gmail.com"
         }
-    ]
+    ],
+     "autoload" : {
+        "psr-4" : {
+            "Lemesdaniel\\S3forme\\": "src/"
+        }
+    }
 }
