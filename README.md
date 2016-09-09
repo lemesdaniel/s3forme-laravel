@@ -13,7 +13,7 @@ Installation
 Using Composer:
 
 ```sh
-composer require lemesdaniel/s3forme-laravel
+composer require lemesdaniel/s3forme
 ```
 
 
